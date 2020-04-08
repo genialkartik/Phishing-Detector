@@ -79,4 +79,5 @@ Woah!!✨ You did it. I hope you may have installed the project successfully, if
 
 _NOTE : Internet connection is required to compile cdn vector lottiefiles and some other included packages._
 
-Connect Me: [ [LinkedIn] ](https://linkedin.com/in/genial-kartik) | [ [Twitter] ](https://twitter.com/genialkartik) | [ [Facebook] ](https://facebook.com/genialkartik) | [ [Instagram] ](https://instagram.com/genialkartik)
+Connect Me on: [ [LinkedIn] ](https://linkedin.com/in/genial-kartik) | [ [Twitter] ](https://twitter.com/genialkartik) | [ [Facebook] ](https://facebook.com/genialkartik) | [ [Instagram] ](https://instagram.com/genialkartik) <br>
+Visit: [ [kartiktyagi.me] ](https://kartiktyagi.me/)
