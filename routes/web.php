@@ -17,3 +17,12 @@ Route::get('/', 'HomePageController@home');
 Route::get('/register', 'HomePageController@register');
 Route::get('/login', 'HomePageController@login');
 Route::get('/about', 'HomePageController@about');
+
+Route::get('/insertURL', 'UrlsController@create');
+Route::get('/phishedURL', 'UrlsController@listAll');
+
+Route::resource('url', 'UrlsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
