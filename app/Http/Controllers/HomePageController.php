@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class HomePageController extends Controller
 {
     public function home(){
+        $item = 0;
+        $enteredURL = '';
+        $URL_srched = false;
         return view('index');
     }
     public function register(){
