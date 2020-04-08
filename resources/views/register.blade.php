@@ -1,29 +1,7 @@
-<!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Check Phishing</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/register.css" />
-	</head>
-	<body class="is-preload">
+@extends('layout/app')
 
-    <div id='cssmenu'>
-<ul>
-<li style="float: left;color:white;font-size: 1.3em; font-style: bold;"><span><a href="/"> Phishing Detection</a></span></li>
-    
-   <li class='active'><a href='/'>Home</a></li>
-   <li><a href='/register'>Register</a></li>
-   <li><a href='/login'>Login</a></li>
-   <li><a href='/about'>About</a></li>
-</ul>
-</div>
+ @section('content')
+
 <style>
     #register{
 	position: absolute;
@@ -52,6 +30,7 @@
 <section id="register">
 		<div class="reg-form">
 			<form name="reg" id="registration" action="" method="POST">
+            {!! Form::open( ['action' => ] ) !!}
                 <br>
                 <span>First Name</span><br>
 				<input type="text" name="fname" id="button" placeholder="first name" required=""><br>
@@ -71,26 +50,18 @@
 			</form>
 		</div>
     </section>
+    <section id="check">
+		<div class="container">
+            <h1>Phishing Checker</h1>
+            {!! Form::open(['action' => 'UrlsController@index', 'method' => 'GET']) !!}
+                <div class="url-search-form">
+                    {{Form::text('url', '', ['class' => 'checkurl', 'placeholder' => 'Enter url here...'])}}
+                    <br>
+                    <br>
+                    {{Form::submit('Submit', ['class' => 'url-btn'])}}
+                </div>
+            {!! Form::close() !!}
+	</div>
+</section>
     
-    
-
-
-        <!-- Footer -->
-        
-        <br>
-        <footer id="footer">
-				<ul class="icons">
-                    <li>&copy; Phishing Checker</li><li>Github: <a href="https://github.com/genialkartik/phishing-checker">Source Code</a></li>
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
-
+    @endsection

@@ -1,17 +1,14 @@
-@extends('layouts/app')
+@extends('./layouts/app')
 
  @section('content')
 <style>
     .lottie1{
         position: absolute;
         right: 100px;
-        top: -150px;
+        top: -90px;
         width: 510px;
         height: 510px;
     }
-    .checkurl{
-  width: 50%;
-}
 </style>
 <div class="lottie1">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -36,11 +33,16 @@
 	</div>
 </section>
 
-        
+        <!-- Header -->
+        @if(count($item)>0)
+                <header id="header">
+                    <p>The URL entered ({{$enteredURL}}) is found <span style="color:red;font-style:bold;">Vulnerable</span>. </p>   
+                    <p>Phishing status: <span style="color:red">+ve</span></p> 
+                </header>
+        @else
 			<header id="header">
-                <p>A phishing website (spoofed site) tries to steal your account information <br> by tricking you into believing you're on a legitimate website by mistyping a URL (web address).</p>
-                <p>Click to Know More about <a href="https://en.wikipedia.org/wiki/Phishing" style="color:white">Phishing!</a>.</p>
+                <p>The URL entered ({{$enteredURL}}) is <span style="color:green;font-style:bold;">safe to use</span>. </p>   
+                <p>Phishing status: <span style="color:green">-ve</span></p> 
             </header>
-            
-
+		@endif
  @endsection
